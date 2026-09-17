@@ -27,7 +27,6 @@ Rewards:
     -10  hit obstacle (episode ends)
     -1   normal move (encourages shorter paths)
 """
-
 import numpy as np
 
 
