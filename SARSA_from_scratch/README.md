@@ -197,7 +197,7 @@ The comparison plot shows both 20-episode rolling averages on the same axes. Q-L
 </p>
 
 <p align="center">
-  <em>Comparison plot of Q-learn and SARSA.</em>
+  <em>Comparison plot of Reward curve between Q-learn and SARSA.</em>
 </p>
 
 ## 🛠️ Technologies Used
