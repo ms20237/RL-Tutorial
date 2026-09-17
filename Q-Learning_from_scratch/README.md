@@ -136,6 +136,14 @@ A couple of things worth noticing:
 *   **Row 7 = state `(1,3)`**, which sits directly above the goal. `RIGHT` has the highest value (10.00), because `RIGHT` from `(1,3)` steps to `(2,3)`… actually into `(1,3)→(2,3)` is `DOWN`. Let me re-check: `(1,3)` is row 1 col 3; `DOWN` (`action 2`) leads to `(2,3)` = goal, reward `+10`. And indeed `Q[(1,3)][DOWN] = 10.00`. The other values are lower because they involve a detour.
 *   **Row 4 = state `(1,0)`** — `UP` (4.10) is high because going up to `(0,0)` then across the top is the safe route; `RIGHT` is `-9.20` because it hits the obstacle for `-10`.
 
+<p align="center">
+  <img src="images/reward_curve.png" alt="Reward Curve plot" width="720"/>
+</p>
+
+<p align="center">
+  <em>Reward Curve plot Q-learn.</em>
+</p>
+
 ## 📊 Visualization (`visualize.py`)
 
 Three tools, all driven from the trained `agent.Q`:
