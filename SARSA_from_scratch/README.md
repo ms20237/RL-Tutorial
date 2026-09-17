@@ -193,7 +193,7 @@ On a deterministic grid with no action noise, this difference is subtle. In the 
 The comparison plot shows both 20-episode rolling averages on the same axes. Q-Learning typically converges slightly faster (higher early rewards) because its `max` target propagates the `+10` goal value more aggressively; SARSA's learning is a touch smoother because its target is less optimistic. Over 500 episodes the two curves end up nearly overlapping — on this task both algorithms reach essentially the same performance.
 
 <p align="center">
-  <img src="images/comparison.png" alt="comparison plot" width="600"/>
+  <img src="images/comparison.png" alt="comparison plot" width="720"/>
 </p>
 
 <p align="center">
