@@ -217,6 +217,20 @@ Algorithm improvements in deep RL are rarely a clean fix. They're a **shift in w
 
 `evaluate.py` prints a `FutureWarning` from `torch.load` about `weights_only=False`. It's harmless — the checkpoint is one you saved yourself — but if you want to silence it, add `weights_only=True` to the `torch.load` call in `agent.py`'s `load()`. This is on the list to clean up.
 
+## 🎓 Questions to Work Through Before Project 5 (Policy Gradient / REINFORCE)
+
+These aren't trivia — each one is a chunk of the mental model you'll need for policy-gradient methods. Try to answer them in writing, in your own words, **before** reading Project 5's code.
+
+1.  Why does letting one network both **select** and **evaluate** the next action bias the target upward?
+2.  Concretely, what would have to happen for Double DQN's target to *still* be overestimated? (Hint: it's not impossible — just less likely.)
+3.  Why doesn't Double DQN need a **third** network? Why can the existing target network handle the "evaluate" role?
+4.  **Looking at your own `comparison_loss.png`:** did Double DQN actually reduce loss instability in this run, or just improve the policy despite similar instability? What does that tell you about what the loss curve is — and isn't — measuring?
+5.  If you increased `buffer_capacity` and training length substantially, would you expect the loss gap between the two algorithms to widen? Why?
+6.  **(Added)** In `compare.py`'s output, Double DQN's **greedy evaluation peak** (165) is much higher than its **training peak** (332) would suggest... wait — check that against your own numbers. Is the *evaluation* peak higher or lower than the *training* peak? What does the gap between training and evaluation performance tell you about how much exploration noise is still present at the end of training?
+
+If you can answer 1–4 by pointing at your own plots, you've understood what Double DQN does and — more importantly — what it *doesn't* do.
+
+
 ## 🔮 Next Steps
 
 *   **Dueling DQN** — split the network into a state-value head `V(s)` and an advantage head `A(s,a)`, recombine as `Q = V + (A − mean(A))`. Orthogonal to Double DQN and stacks cleanly with it.
