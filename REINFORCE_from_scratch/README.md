@@ -11,7 +11,7 @@
 
 This repository implements **REINFORCE — the original policy gradient algorithm — from scratch.** This is the first project in the roadmap where the network learns a **policy** `π_θ(a|s)` *directly*, rather than learning Q-values and deriving a policy via argmax. There is no Q-table, no Bellman target, no target network, no replay buffer, and no epsilon-greedy. The policy *is* the network, and it's trained by ascending the gradient of expected return.
 
-The exact same `REINFORCEAgent` class runs all three experiments in this folder — a 5-state line world, a small obstacle grid, and CartPole — because the algorithm doesn't care what the environment looks like. Only the environment and the `state_encoder` change. That's the doc's point in section 17 made literally true in the code, not just asserted.
+The exact same `REINFORCEAgent` class runs all three experiments in this folder — a 5-state line world, a small obstacle grid, and CartPole — because the algorithm doesn't care what the environment looks like. Only the environment and the `state_encoder` change.
 
 The project is deliberately built up in three stages of difficulty, and **the two harder stages both fail in instructive ways.** That's the real content of this README — not "here's REINFORCE working," but "here's exactly how and why plain REINFORCE breaks, and why the baseline/actor-critic fix in Project 6 is what's needed."
 
