@@ -1,6 +1,4 @@
 """
-agent.py
-
 One-step (TD) Actor-Critic. The key structural difference from Project
 5's REINFORCE: we no longer wait for a whole episode to finish before
 learning. Every single step gives us enough information to update both
