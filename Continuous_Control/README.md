@@ -196,7 +196,7 @@ Episode  250 | avg reward (last 50): -125.96 | avg |final x|: 0.280 | std: 0.171
 Episode  800 | avg reward (last 50): -1104.47 | ... | std: 0.050    ← pre-fix run
 ```
 
-**These training logs are from the pre-fix run.** The saved checkpoint used by `compare.py` is from a *re-run after the std-decay + gradient-clipping fix* — that's the version that produces the −125.97 evaluation result below. The README documents the pre-fix collapse honestly because it's the more useful lesson.
+**These training logs are from the pre-fix run.** The saved checkpoint used by `compare.py` is from a *re-run after the std-decay + gradient-clipping fix* — that's the version that produces the −125.97 evaluation result below. The pre-fix collapse honestly because it's the more useful lesson.
 
 ### Three-way comparison from `x0 = 3.0`
 
